@@ -2,11 +2,25 @@ const slider = document.querySelector('.slider');
 const sliderValue = document.querySelector('#gridSliderValue');
 
 slider.oninput = function() {
-    sliderValue.textContent = `Value: ${slider.value}`;
+    const gridContainer = document.querySelector('.gridContainer');
+    let gridDivisions =  slider.value; 
+    sliderValue.textContent = `GRID Height Divisions: ${slider.value}`;
+    
+    clearGridContainer();
+    
+    for (let i = 0; i < gridDivisions; i++) {
+        const gridDiv = document.createElement('div');
+        gridDiv.classList.add('gridDiv');
+        gridContainer.appendChild(gridDiv);
+    }
 }
 
-const gridContainer = document.querySelector('.gridContainer');
+function clearGridContainer() {
+    const gridContainer = document.querySelector('.gridContainer');
+    const allGridDivs = document.querySelectorAll('.gridDiv');
 
-function addGridDivs() {
-    
+    allGridDivs.forEach((div) => {
+        gridContainer.removeChild(div);
+    });
+
 }
