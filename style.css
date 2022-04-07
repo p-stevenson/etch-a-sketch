@@ -1,5 +1,5 @@
 * {
-    /* border: solid 5px; */
+    border: solid 5px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0px;
@@ -65,4 +65,9 @@ html, body {
     height: 50px;
     background-color: rgb(255, 0, 170);
     cursor: pointer;
+}
+
+.gridDiv {
+    border:solid 5px rgba(255, 0, 170, 0.25);
+    flex: 1 1 auto;
 }
