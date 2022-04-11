@@ -19,15 +19,6 @@ html, body {
     height: 100vh;
 }
 
-.gridContainer{
-    border-color: limegreen;
-    background-color: azure;
-    flex: 10 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-}
-
 .toolbarContainer {
     border-color: cyan;
     background-color: antiquewhite;
@@ -53,7 +44,7 @@ html, body {
     outline: none;
 }
 
-#gridSliderValue {
+/* #gridSliderValue {
     font-family: 'Roboto';
     font-weight: bold;
 }
@@ -65,9 +56,19 @@ html, body {
     height: 50px;
     background-color: rgb(255, 0, 170);
     cursor: pointer;
+} */
+
+.gridContainer{
+    border-color: limegreen;
+    background-color: azure;
+    flex: 10 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, auto));
+    max-width: 900px;
+    max-height: 900px;
 }
 
 .gridDiv {
-    border:solid 5px rgba(255, 0, 170, 0.25);
-    flex: 1 1 auto;
+    border:solid 1px rgba(255, 0, 170, 0.075);
+    aspect-ratio: 1;
 }
