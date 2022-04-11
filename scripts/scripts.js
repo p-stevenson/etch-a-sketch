@@ -1,10 +1,11 @@
 const slider = document.querySelector('.slider');
-const sliderValue = document.querySelector('#gridSliderValue');
+const sliderValueText = document.querySelector('#gridSliderValue');
 
 slider.oninput = function() {
     const gridContainer = document.querySelector('.gridContainer');
-    let gridDivisions =  slider.value; 
-    sliderValue.textContent = `GRID Height Divisions: ${slider.value}`;
+    const gridDivisions =  slider.value ** 2; 
+    sliderValueText.textContent = `GRID Height Divisions: ${slider.value}`;
+    gridContainer.style.setProperty('grid-template-columns', `repeat(${slider.value}, minmax(auto, auto))`);
     
     clearGridContainer();
     
