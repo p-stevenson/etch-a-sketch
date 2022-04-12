@@ -32,5 +32,8 @@ function clearGridContainer() {
 
 }
 
-// so next up is to move the toolbar to the top and set it to show on hover.
+// see if you can figure out mousedown + mouseenter
+// move mouseTarget into it's on function and call inside slider.oninput
+// also call it onpage load so that the user can paint before adjusting the number of divisions
+// 
 
