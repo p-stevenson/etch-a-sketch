@@ -14,6 +14,12 @@ slider.oninput = function() {
         gridDiv.classList.add('gridDiv');
         gridContainer.appendChild(gridDiv);
     }
+    const mouseTarget = document.querySelectorAll('.gridDiv');
+    mouseTarget.forEach((div) => {
+        div.addEventListener('mouseenter', e => {
+            div.style.backgroundColor = '#000000';
+        });
+    });
 }
 
 function clearGridContainer() {
@@ -25,3 +31,6 @@ function clearGridContainer() {
     });
 
 }
+
+// so next up is to move the toolbar to the top and set it to show on hover.
+
