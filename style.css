@@ -1,5 +1,5 @@
 * {
-    border: solid 5px;
+    /* border: solid 5px; */
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0px;
@@ -15,7 +15,10 @@ html, body {
 .container {
     border-color: hotpink;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: flex-start;
     height: 100vh;
 }
 
@@ -23,17 +26,22 @@ html, body {
     border-color: cyan;
     background-color: antiquewhite;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    /* flex: 1 1 auto; */
+}
+
+.colorPicker {
     flex: 1 0 auto;
+    -webkit-appearance: none;
+    border: none;
 }
 
 .sliderContainer {
     border-color: orange;
-    flex: 0 1 auto;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
+    flex: 1 1 auto;
+    height: fit-content;
 }
 
 #gridSlider {
@@ -44,7 +52,7 @@ html, body {
     outline: none;
 }
 
-/* #gridSliderValue {
+#gridSliderValue {
     font-family: 'Roboto';
     font-weight: bold;
 }
@@ -56,7 +64,7 @@ html, body {
     height: 50px;
     background-color: rgb(255, 0, 170);
     cursor: pointer;
-} */
+}
 
 .gridContainer{
     border-color: limegreen;
@@ -64,8 +72,9 @@ html, body {
     flex: 10 0 auto;
     display: grid;
     grid-template-columns: repeat(2, minmax(auto, auto));
-    max-width: 900px;
-    max-height: 900px;
+    width: 100%;
+    max-width: 960px;
+    max-height: 960px;
 }
 
 .gridDiv {
