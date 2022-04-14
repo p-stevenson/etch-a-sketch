@@ -33,7 +33,7 @@ function changeColor() {
     const mouseTarget = document.querySelectorAll('.gridDiv');
     mouseTarget.forEach((div) => {
         div.addEventListener('mouseenter', e => {
-            div.style.backgroundColor = '#000000';
+            div.style.backgroundColor = colorSwatch.style.getPropertyValue('background-color');
         });
     });
 }
@@ -48,6 +48,29 @@ function triggerMouse() {
 }
 
 triggerMouse();
+
+/* function colorPicker(); { */
+    const colorSwatch = document.querySelector('.colorSwatch');
+    const redValue = document.querySelector('#redSlider');
+    const greenValue = document.querySelector('#greenSlider');
+    const blueValue = document.querySelector('#blueSlider');
+/* } */
+
+redValue.oninput = function() {
+    colorSwatch.style.setProperty('background-color', `rgb(${redValue.value}, ${greenValue.value}, ${blueValue.value})`);
+    console.log(`R: ${redValue.value}`);
+}
+
+greenValue.oninput = function() {
+    colorSwatch.style.setProperty('background-color', `rgb(${redValue.value}, ${greenValue.value}, ${blueValue.value})`);
+    console.log(`G: ${greenValue.value}`);
+}
+
+blueValue.oninput = function() {
+    colorSwatch.style.setProperty('background-color', `rgb(${redValue.value}, ${greenValue.value}, ${blueValue.value})`);
+}
+
+
 
 // see if you can figure out mousedown + mouseenter
 // 
