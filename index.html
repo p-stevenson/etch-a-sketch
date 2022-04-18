@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketchish</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script src="scripts/scripts.js" defer></script>
 </head>
 <body>
@@ -26,9 +29,16 @@
                     </div>
                 </div>
             </div>
-            <div class="gridSliderContainer">
-                <input type="range" min="2" max="100" value="2" step = "2" class ='slider' id="gridSlider">
-                <p id="gridSliderText">GRID SIZE: 2</p>
+            <div class="rightSideContainer">
+                <div class="gridSliderContainer">
+                    <input type="range" min="2" max="100" value="2" step = "2" class ='slider' id="gridSlider">
+                    <p id="gridSliderText">GRID SIZE: 2</p>
+                </div>
+                <div class="buttonContainer">
+                    <button class="button" id="blackButton">BLACK</button>
+                    <button class="button" id="rainbowButton">MULTI</button>
+                    <button class="button" id="clearButton">CLEAR</button>
+                </div>
             </div>
         </div>
         <div class="gridContainer">
