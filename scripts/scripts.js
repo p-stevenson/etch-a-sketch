@@ -18,6 +18,12 @@ slider.oninput = function() {
     triggerMouse();
 }
 
+function clear() {
+    const clearButton = document.querySelector('#clearButton');
+    clearButton.addEventListener('click', e => {
+        slider.oninput();
+    });
+}
 
 function clearGridContainer() {
     const gridContainer = document.querySelector('.gridContainer');
@@ -57,20 +63,20 @@ triggerMouse();
 /* } */
 
 redValue.oninput = function() {
-    colorSwatch.style.setProperty('background-color', `rgb(${redValue.value}, ${greenValue.value}, ${blueValue.value})`);
-    console.log(`R: ${redValue.value}`);
+    colorSwatch.style.setProperty('background-color', `rgb(${redValue.value}, 
+            ${greenValue.value}, ${blueValue.value})`);
 }
 
 greenValue.oninput = function() {
-    colorSwatch.style.setProperty('background-color', `rgb(${redValue.value}, ${greenValue.value}, ${blueValue.value})`);
-    console.log(`G: ${greenValue.value}`);
+    colorSwatch.style.setProperty('background-color', `rgb(${redValue.value}, 
+            ${greenValue.value}, ${blueValue.value})`);
 }
 
 blueValue.oninput = function() {
-    colorSwatch.style.setProperty('background-color', `rgb(${redValue.value}, ${greenValue.value}, ${blueValue.value})`);
+    colorSwatch.style.setProperty('background-color', `rgb(${redValue.value}, 
+            ${greenValue.value}, ${blueValue.value})`);
 }
-
-
+clear();
 
 // see if you can figure out mousedown + mouseenter
 // 
