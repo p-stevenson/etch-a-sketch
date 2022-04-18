@@ -1,5 +1,5 @@
 * {
-    /* border: solid 5px;- */
+    /* border: solid 5px; */
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0px;
@@ -7,56 +7,64 @@
     overflow: hidden;
 }
 
-html, body {
-    border: none;
+body {
+    border-color: gold;
     background-color: #8f8f8f;
-}
-
-.container {
-    border-color: hotpink;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    justify-items: flex-start;
+    justify-content: center;
     height: 100vh;
 }
 
+.container {
+    outline: solid 1px rgba(0, 0, 0, 1);
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    max-width: 960px;
+    max-height: 1160px;
+}
+
 .toolbarContainer {
-    border-color: cyan;
-    background-color: antiquewhite;
+    border-color: white;
+    background-color: rgb(128, 128, 128);
     display: flex;
     flex-direction: row;
-    width: 100%;
     height: auto;
+    width: 100%;
 }
 
 .pickerContainer {
-    border-color: darkmagenta;
+    outline: solid 1px black;
     display: flex;
     flex-direction: column;
 }
 
 .colorSwatch {
-    border: solid 1px rgb(39, 39, 39);
-    width: auto;
-    height: 50px;
-    flex: 1 0 auto;
+    border-bottom: solid 1px black;
     background-color: rgb(128, 128, 128);
+    flex: 1 0 auto;
+    height: 50px;
+    width: auto;
 }
 
 .colorSliderContainer {
+    /* padding: 3px; */
+    /* outline: solid 1px black; */
     display: flex;
     flex-direction: row;
 }
 
 .slider {
-    border: solid 1px rgba(39, 39, 39, 0.349);
+    outline: solid 1px rgb(0, 0, 0);
     background: #4f4f4f;
-    appearance: none;
-    width: 100%;
     height: 20px;
-    outline: none;
+    width: 100%;
+    appearance: none;
 }
 
 #redSlider::-webkit-slider-thumb {
@@ -69,6 +77,16 @@ html, body {
     background-color:rgb(0, 119, 255);
 }
 
+#redSlider, #greenSlider {
+    border-bottom: solid 1px black;
+}
+
+.rightSideContainer {
+    border-color: greenyellow;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
 .gridSliderContainer {
     border-color: orange;
     flex: 1 1 auto;
@@ -76,27 +94,28 @@ html, body {
 }
 
 #gridSlider {
+    border-left: solid 1px black;
     height: 25px;
 }
 
 #gridSliderText {
     border: rgb(236, 218, 50);
-    font-family: 'Roboto';
-    font-weight: bold;
+    font-family: 'Bebas Neue', 'Roboto', cursive;
+    font-size: 1.5pc;
+    padding-left: 5px;
 }
 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 10px;
     height: 50px;
+    width: 10px;
     background-color: rgb(255, 0, 170);
     cursor: pointer;
 }
 
-
 .gridContainer{
-    border-color: limegreen;
+    outline: solid 1px rgba(0, 0, 0, 1);
     background-color: rgb(206, 206, 206);
     flex: 10 0 auto;
     display: grid;
@@ -109,4 +128,16 @@ html, body {
 .gridDiv {
     border:solid 1px rgba(228, 228, 228, 0.137);
     aspect-ratio: 1;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.button {
+    outline: solid 1px black;
+    font-family: 'Bebas Neue', 'Roboto', cursive;
+    font-size: 1.5pc;
 }
