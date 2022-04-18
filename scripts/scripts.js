@@ -25,6 +25,39 @@ function clear() {
     });
 }
 
+function setBlack() {
+    const colorSwatch = document.querySelector('.colorSwatch');
+    const redValue = document.querySelector('#redSlider');
+    const greenValue = document.querySelector('#greenSlider');
+    const blueValue = document.querySelector('#blueSlider');
+
+    const blackButton = document.querySelector('#blackButton');
+    blackButton.addEventListener('click', e => {
+        redValue.value = 0;
+        greenValue.value = 0;
+        blueValue.value = 0;
+        colorSwatch.style.setProperty('background-color', `rgb(${redValue.value}, 
+            ${greenValue.value}, ${blueValue.value})`);
+    })
+}
+
+function setRandom() {
+    const colorSwatch = document.querySelector('.colorSwatch')
+    const redValue = document.querySelector('#redSlider');
+    const greenValue = document.querySelector('#greenSlider');
+    const blueValue = document.querySelector('#blueSlider');
+
+    const randomButton = document.querySelector('#randomButton');
+    randomButton.addEventListener('click', e => {
+        redValue.value = Math.floor(Math.random() * 255);
+        greenValue.value = Math.floor(Math.random() * 255);
+        blueValue.value = Math.floor(Math.random() * 255);
+        colorSwatch.style.setProperty('background-color', `rgb(${redValue.value}, 
+            ${greenValue.value}, ${blueValue.value})`);
+        console.log('test');
+    })
+}
+
 function clearGridContainer() {
     const gridContainer = document.querySelector('.gridContainer');
     const allGridDivs = document.querySelectorAll('.gridDiv');
@@ -35,7 +68,7 @@ function clearGridContainer() {
 
 }
 
-function changeColor() {
+function draw() {
     const mouseTarget = document.querySelectorAll('.gridDiv');
     mouseTarget.forEach((div) => {
         div.addEventListener('mouseenter', e => {
@@ -48,7 +81,7 @@ function triggerMouse() {
     const mouseTarget = document.querySelectorAll('.gridDiv');
     mouseTarget.forEach((div) => {
         div.addEventListener('mousedown', e => {
-            changeColor();
+            draw();
         })
     })
 }
@@ -77,7 +110,12 @@ blueValue.oninput = function() {
             ${greenValue.value}, ${blueValue.value})`);
 }
 clear();
+setBlack();
+setRandom();
 
-// see if you can figure out mousedown + mouseenter
-// 
+// general tidy up
+// move color picker out of global scope
+// implement method for random color on mouse enter
+
+
 
