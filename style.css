@@ -126,7 +126,8 @@ body {
 }
 
 .gridDiv {
-    border:solid 1px rgba(228, 228, 228, 0.137);
+    outline:solid 1px rgba(228, 228, 228, 0.137);
+    background-color: rgb(206, 206, 206);
     aspect-ratio: 1;
 }
 
