@@ -141,4 +141,6 @@ body {
     outline: solid 1px black;
     font-family: 'Bebas Neue', 'Roboto', cursive;
     font-size: 1.5pc;
+    padding-left: 3px;
+    padding-right: 3px;
 }
